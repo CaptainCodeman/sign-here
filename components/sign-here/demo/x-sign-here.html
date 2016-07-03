@@ -1,0 +1,76 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../sign-here.html">
+
+<dom-module id="x-sign-here">
+  <template>
+    <style>
+      sign-here, img {
+        border: 1px solid #ccc;
+        width: 400px;
+        height: 200px;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+    <sign-here id="signhere" width="400" height="200" image="{{image}}" active="{{active}}" empty="{{empty}}" type="[[type]]" pen-color="[[color]]" background-color="#fffff7"></sign-here>
+    <ul>
+      <li>Active: [[active]]</li>
+      <li>Empty: [[empty]]</li>
+    </ul>
+    <button on-tap="clear">Clear</button>
+    <button on-tap="jpeg">Jpeg</button>
+    <button on-tap="png">Png</button>
+    <button on-tap="webp">Webp</button>
+    <button on-tap="red" style="color: #a33">Red</button>
+    <button on-tap="green" style="color: #3a3">Green</button>
+    <button on-tap="blue" style="color: #33a">Blue</button>
+    <h3>Captured Image</h3>
+    <img src$="[[image]]">
+    <h3>Image Data</h3>
+    <p>[[len(image)]] bytes</p>
+    <pre>[[image]]</pre>
+  </template>
+  <script>
+    Polymer({
+      is: "x-sign-here",
+
+      properties: {
+        image: String,
+        type: {
+          type: String,
+          value: 'image/png'
+        },
+        color: {
+          type: String,
+          value: '#33a'
+        }
+      },
+      clear: function() {
+        this.$.signhere.clear();
+      },
+      jpeg: function() {
+        this.type = 'image/jpeg';
+      },
+      png: function() {
+        this.type = 'image/png';
+      },
+      webp: function() {
+        this.type = 'image/webp';
+      },
+      red: function() {
+        this.color = '#a33';
+      },
+      green: function() {
+        this.color = '#3a3';
+      },
+      blue: function() {
+        this.color = '#33a';
+      },
+      len: function(image) {
+        return image.length;
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,42 @@
+{
+  "name": "sign-here",
+  "description": "Smooth signature drawing with HTML5 Canvas",
+  "authors": [
+    "Simon Green <simon@captaincodeman.com>"
+  ],
+  "main": "sign-here.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/github.com/CaptainCodeman/sign-here.git"
+  },
+  "homepage": "http://captaincodeman.github.io/sign-here/",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "signature_pad",
+    "signature",
+    "sign",
+    "canvas"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "signature_pad": "^1.5.3"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "license": "MIT",
+  "_release": "572052dad5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "572052dad5c8ba43969497dbd9cf236fd97bb414"
+  },
+  "_source": "git://github.com/CaptainCodeman/sign-here.git",
+  "_target": "master",
+  "_originalSource": "CaptainCodeman/sign-here",
+  "_direct": true
+}
